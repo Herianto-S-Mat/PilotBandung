@@ -30,9 +30,9 @@ export const PageButton = ({children, link}) => {
         textWrap:'nowrap',
         borderRadius:'.2em',
         border: '0',
-        padding:'.3em 1.5em',
+        padding:'.1em 1.2em',
         textDecoration:'none',
-        fontSize:'1.5em',
+        fontSize:'1.2em',
         color:'black',
       }}
     >
