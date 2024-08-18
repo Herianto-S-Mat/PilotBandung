@@ -25,7 +25,7 @@ export const PageButton = ({children, link}) => {
   return (
     <Link
       to = {`/${link}`} 
-      className='bg-warning-subtle' 
+      className='bg-light' 
       style={{
         textWrap:'nowrap',
         borderRadius:'.2em',

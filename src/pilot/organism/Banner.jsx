@@ -20,7 +20,7 @@ export const Banner = () => {
             <h4 className='text'>Welcome To Web</h4>
             <h1>Pilot Bandung</h1>
             <p>" Layanan untuk membantu kenyamanan perjalanan anda "</p>
-            <div style={{display:'flex',justifyContent:'center', flexWrap:'wrap', gap:'.5em', borderTop:'2px solid #FEFAE0'}} className='pt-3 text-light'>
+            <div style={{display:'flex',justifyContent:'center', flexWrap:'wrap', gap:'.5em'}} className='pt-3 text-light'>
               <PageButton link={'ada'}>
                 Jasa Supir
               </PageButton>

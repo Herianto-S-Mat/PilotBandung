@@ -17,7 +17,7 @@ export const Service = () => {
 						backgroundRepeat: 'no-repeat'
 					}}
 				/>
-				<Carousel.Caption className='text-dark bg-light rounded p-3 mb-5 bg-opacity-75 border border-2 border-warning'>
+				<Carousel.Caption className='text-dark bg-light rounded p-2 mb-5 bg-opacity-75 border border-2 border-warning'>
 					<h2>{service.title}</h2>
 					<p>{service.description}</p>
 					<ContactButton to={service.link}>
