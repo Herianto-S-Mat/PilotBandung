@@ -21,7 +21,7 @@ export const Index = () => {
     <Section title='Testimoni'>
       <Testimoni/>
     </Section>
-    <Section title='Komentar Pelanggan'>
+    <Section title='Kata Pelanggan'>
       <Coment/>
     </Section>
 
