@@ -7,7 +7,7 @@ export const TitleLine = ({children}) => {
         flexDirection:'row',
         alignItems:'center',
         marginInline: '1em',
-        marginTop:'6em'
+        margin:'6em',
     }}>
         <hr className='text-dark w-100 opacity-100 mx-3'/>
         {children}

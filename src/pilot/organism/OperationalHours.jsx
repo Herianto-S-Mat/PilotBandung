@@ -22,15 +22,15 @@ export const OperationalHours = () => {
 							maxWidth:'600px'
 						}}
 					>
-						{jam.map((data)=>(
-							<Alert variant={'success'}>
+						{jam.map((data,i)=>(
+							<Alert variant={'dark'} key={i}>
 								<div className="text-center">
 									<h5 className="text-nowrap text-start">{data.layanan} :</h5>
 									<h1 className=" bg-light rounded">{data.operational}</h1>
 								</div>
 							</Alert>
 						))}
-						<Alert variant={'warning'}>
+						<Alert variant={'success'}>
 							<div className="text-center">
 								<h5 className="">
 									Segera jadwalkan keperluan anda melalui kontak kami !!!

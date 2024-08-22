@@ -33,7 +33,7 @@ export const Testimoni = () => {
   return (
     <Carousel responsive={responsive}>
       {coment.map((data, i)=>(
-        <div key ={i} className='text-center mx-2'>
+        <div key ={i} className='text-center mx-5 bg-dark  rounded p-1'>
           <ItemCorousel data ={data}/>
         </div>
       ))}
@@ -45,7 +45,7 @@ export const Testimoni = () => {
 const ItemCorousel = ({data}) => {
   return (
     <>
-      <img className='alert alert-warning w-100 img-fluid'
+      <img className='w-100 img-fluid rounded'
         src={data.url?data.url:placeholder_img} 
       />
     </>

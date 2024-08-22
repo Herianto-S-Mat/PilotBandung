@@ -11,7 +11,8 @@ export const Section = ({children, title}) => {
                 flexDirection:'row',
                 alignItems:'center',
                 marginInline: '1em',
-                marginTop:'6em'
+                marginTop:'6em',
+                marginBottom:'2em'
             }}
         >
             <hr className='text-dark w-100 opacity-100 mx-3'/>
