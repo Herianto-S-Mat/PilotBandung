@@ -3,7 +3,7 @@ import wa from '/wa.svg'
 export const ContactMe = () => {
 	const phoneNumber = '+6282129100990'; // Ganti dengan nomor telepon yang diinginkan
   const message = encodeURIComponent(
-`saya emesan 
+`Halo, saya ingin menanyakan tentang layanan Pilot Bandung. 
 `
 );
   return (
