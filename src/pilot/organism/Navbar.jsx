@@ -33,13 +33,11 @@ export const MyNavbar = () => {
                     title="Layanan Kami"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#" className='text-light'>Jasa Supir</NavDropdown.Item>
+                    <NavDropdown.Item href="#">Jasa Supir</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#" className='text-light'>Rental Mobil + Driver</NavDropdown.Item>
+                    <NavDropdown.Item href="#">Rental Mobil + Driver</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#" className='text-light'>
-                      Wisata Bandung
-                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#"> Wisata Bandung </NavDropdown.Item>
                   </NavDropdown>
                   <Nav.Link href="#">Kontak Kami</Nav.Link>
                 </Nav>
