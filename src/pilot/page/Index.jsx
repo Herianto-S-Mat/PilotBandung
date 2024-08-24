@@ -23,7 +23,7 @@ export const Index = () => {
       <MyMaps/>
       {/* <MapComponent/> */}
     </Section>
-    <Section title='Transmisi'>
+    <Section title='Foto-Foto'>
       <Testimoni/>
     </Section>
     {/* <Section title='Testimoni'>
