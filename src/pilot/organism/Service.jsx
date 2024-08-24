@@ -41,9 +41,9 @@ export const Service = () => {
 						konsultasi
 					</ConsultButton>
 				</p>
-				<p className='px-3 mb-2 text-start'>
+				{/* <p className='px-3 mb-2 text-start'>
 					<a href={link_wa}>{'baca selengkapnya'}</a>
-				</p>
+				</p> */}
 				<ContactButton to={service.url_wa}>
 					Hubungi kami
 				</ContactButton>
