@@ -1,5 +1,6 @@
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { ContactButton } from "./MyButton";
+import { number_wa } from "../../data/wa";
 
 export const OperationalHours = () => {
 	const jam = [
@@ -23,25 +24,15 @@ export const OperationalHours = () => {
 						}}
 					>
 						{jam.map((data,i)=>(
-							<Alert variant={'dark'} key={i}>
+							<Alert variant={'warning'} key={i}>
 								<div className="text-center">
 									<h5 className="text-nowrap text-start">{data.layanan} :</h5>
 									<h1 className=" bg-light rounded">{data.operational}</h1>
 								</div>
 							</Alert>
 						))}
-						<Alert variant={'success'}>
-							<div className="text-center">
-								<h5 className="">
-									Segera jadwalkan keperluan anda melalui kontak kami !!!
-								</h5>
-								<h1 className=" bg-light rounded">085234xxxxxx </h1>
-								<div className="py-3">
-									<ContactButton to={'/sdcsd'}> 
-										Hubungi Kami 
-									</ContactButton>
-								</div>
-							</div>
+						<Alert variant={'success'} id='operation-hours-contact'>
+							
 						</Alert>
 					</div>
         </Col>

@@ -33,7 +33,7 @@ export const Testimoni = () => {
   return (
     <Carousel responsive={responsive}>
       {coment.map((data, i)=>(
-        <div key ={i} className='text-center mx-5 bg-dark  rounded p-1'>
+        <div key ={i} className='text-center mx-5 bg-warning  rounded p-1'>
           <ItemCorousel data ={data}/>
         </div>
       ))}

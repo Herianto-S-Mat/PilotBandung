@@ -12,8 +12,8 @@ export const MyNavbar = () => {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="mb-3 fixed-top py-0 rounded " bg="none" data-bs-theme="dark">
-          <Container className='bg-dark py-2 mt-0 shadow-sm'>
+        <Navbar key={expand} expand={expand} className="mb-3 fixed-top py-0 " bg="none" data-bs-theme="dark">
+          <Container className='bg-dark py-2 mt-0 shadow-sm' style={{borderRadius:'0 0 1em 1em'}}>
             <Navbar.Brand href="#"><h1 className='text-light'>Pilot Bandung</h1></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas

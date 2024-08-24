@@ -43,8 +43,8 @@ export const ConsultButton = ({children, to}) => {
 
 export const PageButton = ({children, link}) => {
   return (
-    <Link
-      to = {`/${link}`} 
+    <a
+      href= {link} 
       className='bg-light' 
       style={{
         textWrap:'nowrap',
@@ -57,6 +57,6 @@ export const PageButton = ({children, link}) => {
       }}
     >
         {children}
-    </Link>
+    </a>
   )
 }
