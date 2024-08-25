@@ -31,7 +31,7 @@ export const Banner = () => {
             borderRadius:'0 0 1em 1em'
           }}>
           <div style={{paddingTop: '3em', display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'400px', borderRadius:'0 0 1em 1em' }} className='vh-100 bg-dark bg-opacity-75 text-light '>
-            <h3>Welcome To Profile</h3>
+            <h3>Welcome To</h3>
             <h1  className='py-3' style={{fontSize:'2.5em'}}>{data.judul_jasa}</h1>
             <p>" {data.deskripsi_jasa} "</p>
             <div id='banner_button' style={{display:'flex',justifyContent:'center', flexWrap:'wrap', gap:'.5em'}} className='pt-3 text-light'>
