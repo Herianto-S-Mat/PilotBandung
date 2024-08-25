@@ -45,7 +45,9 @@ export const Testimoni = () => {
 const ItemCorousel = ({data}) => {
   return (
     <>
-      <img className='w-100 img-fluid rounded'
+      <img 
+        alt="gambar"
+        className='w-100 img-fluid rounded'
         src={data.url?data.url:placeholder_img} 
       />
     </>
