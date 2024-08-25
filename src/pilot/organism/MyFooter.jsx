@@ -23,7 +23,7 @@ export const MyFooter = () => {
 	}, []);
   return (
 <Container fluid className="bg-dark bg-gradient text-warning mt-5" style={{borderRadius:'1em 1em 0 0'}}>
-    <Row className='pt-5 p-3'>
+    <Row id='kontak-kami' className='pt-5 p-3'>
 		{data.map((data_info, index) => (
 			<span className='pb-2' key={index}>
 				<b className='mb-1 fs-4 d-block'>{data_info.entity_name}</b>

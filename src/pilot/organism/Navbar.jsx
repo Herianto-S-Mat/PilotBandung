@@ -28,18 +28,18 @@ export const MyNavbar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3" variant="underline">
-                  <Nav.Link href="#">Beranda</Nav.Link>
+                  {/* <Nav.Link href="#">Beranda</Nav.Link> */}
                   <NavDropdown
                     title="Layanan Kami"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#">Jasa Supir</NavDropdown.Item>
+                    <NavDropdown.Item href="#layanan">Jasa Supir</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#">Rental Mobil + Driver</NavDropdown.Item>
+                    <NavDropdown.Item href="#layanan">Rental Mobil + Driver</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#"> Wisata Bandung </NavDropdown.Item>
+                    <NavDropdown.Item href="#layanan"> Wisata Bandung </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#">Kontak Kami</Nav.Link>
+                  <Nav.Link href="#kontak-kami">Kontak Kami</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-export const Section = ({children, title}) => {
+export const Section = ({children, title, id = null}) => {
   return (
-    <Container>
+    <Container id={id ? id : undefined}>
         <div 
             className='' 
             style={{

@@ -24,13 +24,11 @@ export const Service = () => {
                 console.error('Failed to fetch layanan data:', error);
             });
     }, []);
-	return (
-		
+	return (		
 		<div className="container text-center">
 		<div className="row">
 		{services.map((service, i) => (
 		  <div className="col-12 col-md-6 col-lg" key={i}>
-			{/* <div className='shadow rounded p-2 pt-2 pb-4 mb-5 bg-opacity-75'> */}
 			<Alert variant={'warning'}>
 				<h3 className='py-3 mb-3 text-start border-bottom border-2 border-dark'>{service.judul}</h3>
 				<p className='px-3 mb-2 text-start'>
@@ -55,7 +53,6 @@ export const Service = () => {
 					document.getElementById('banner_button')
 				)}
 			</Alert>
-			{/* </div> */}
 		  </div>
 		))}	
 		</div>
