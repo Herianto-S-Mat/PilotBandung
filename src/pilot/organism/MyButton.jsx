@@ -5,7 +5,6 @@ import wa from'/wa.svg'
 
 export const ContactButton = ({children, message}) => {
   const phoneNumber = '+6282129100990';
-  console.log(message)
   return (
     <Link 
       className='bg-dark text-light text-nowrap' 
@@ -27,7 +26,6 @@ export const ContactButton = ({children, message}) => {
 
 export const ConsultButton = ({children, message}) => {
   const phoneNumber = '+6282129100990';
-  console.log(message)
   return (
     <Link 
       className='bg-success-subtle text-dark text-nowrap' 
@@ -47,7 +45,6 @@ export const ConsultButton = ({children, message}) => {
 
 export const PageButton = ({children, message}) => {
   const phoneNumber = '+6282129100990';
-  console.log(message)
   return (
     <a
       href={`https://wa.me/${phoneNumber}?text=${message}`}

@@ -8,7 +8,6 @@ import { Alert } from 'react-bootstrap';
 
 export const Service = () => {
 	const [services, setServices] = useState([]);
-	console.log(services)
     useEffect(() => {
         layanan
             .then(data => {
