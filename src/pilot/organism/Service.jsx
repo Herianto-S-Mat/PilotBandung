@@ -8,7 +8,7 @@ import { Alert } from 'react-bootstrap';
 
 export const Service = () => {
 	const [services, setServices] = useState([]);
-
+	console.log(services)
     useEffect(() => {
         layanan
             .then(data => {
@@ -35,18 +35,18 @@ export const Service = () => {
 					{service.url_gambar}
 				</p>
 				<p className='px-3 mb-2 text-end'>
-					<ConsultButton to={service.url_wa}>
+					<ConsultButton message={service.url_wa}>
 						konsultasi
 					</ConsultButton>
 				</p>
 				{/* <p className='px-3 mb-2 text-start'>
 					<a href={link_wa}>{'baca selengkapnya'}</a>
 				</p> */}
-				<ContactButton to={service.url_wa}>
+				<ContactButton message={service.url_wa}>
 					Hubungi kami
 				</ContactButton>
 				{createPortal(
-					<PageButton link={service.url_wa}>
+					<PageButton message={service.url_wa}>
 						{service.judul}
 					</PageButton>
 					,

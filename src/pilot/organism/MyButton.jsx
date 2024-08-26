@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import wa from'/wa.svg'
 
 
-export const ContactButton = ({children, to}) => {
+export const ContactButton = ({children, message}) => {
+  const phoneNumber = '+6282129100990';
+  console.log(message)
   return (
     <Link 
       className='bg-dark text-light text-nowrap' 
-      to={to}
+      to={`https://wa.me/${phoneNumber}?text=${message}`}
       style={{
         display: 'block',
         borderRadius:'.5em .5em .5em .5em',
@@ -23,11 +25,13 @@ export const ContactButton = ({children, to}) => {
   )
 }
 
-export const ConsultButton = ({children, to}) => {
+export const ConsultButton = ({children, message}) => {
+  const phoneNumber = '+6282129100990';
+  console.log(message)
   return (
     <Link 
       className='bg-success-subtle text-dark text-nowrap' 
-      to={to}
+      to={`https://wa.me/${phoneNumber}?text=${message}`}
       style={{
         borderRadius:'1em 1em 0 1em',
         border: '0',
@@ -41,10 +45,12 @@ export const ConsultButton = ({children, to}) => {
   )
 }
 
-export const PageButton = ({children, link}) => {
+export const PageButton = ({children, message}) => {
+  const phoneNumber = '+6282129100990';
+  console.log(message)
   return (
     <a
-      href= {link} 
+      href={`https://wa.me/${phoneNumber}?text=${message}`}
       className='bg-light' 
       style={{
         textWrap:'nowrap',

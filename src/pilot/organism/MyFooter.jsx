@@ -56,7 +56,7 @@ export const MyFooter = () => {
 								</h5>
 								<h1 className=" bg-light rounded">{data_info.detail}</h1>
 								<div className="py-3">
-								<ContactButton to={`https://wa.me/${data_info.detail}?text=Halo,%20saya%20ingin%20menanyakan%20tentang%20layanan%20Pilot%20Bandung.`}> 
+								<ContactButton message={`Halo!!! Saya mau menanyakan layanan Pilot Bandung, saya ada jadwal`}> 
 									Hubungi Kami 
 								</ContactButton>
 								</div>
