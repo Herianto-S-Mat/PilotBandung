@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 
-export const Modal = ({ judul, link }) => {
+export const Portal = ({ judul, link }) => {
   if (isOpen===null) return null;
   return ReactDOM.createPortal(
     <PageButton link={link}>

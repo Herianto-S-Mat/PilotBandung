@@ -1,13 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import wa from'/wa.svg'
+import call from'/call.svg'
 
-
-export const ContactButton = ({children, message}) => {
+export const ContactButton = ({children}) => {
   const phoneNumber = '+6282129100990';
   return (
     <Link 
-      className='bg-dark text-light text-nowrap' 
+      className='bg-dark text-light text-nowrap border border-dark' 
+      to={`tel:${phoneNumber}`}
+      style={{
+        display: 'block',
+        borderRadius:'.5em .5em .5em .5em',
+        border: '0',
+        paddingBlock:'.2em',
+        paddingInline:'.5em',
+        marginTop:'1em',
+        textDecoration:'none'
+    }}>
+        <img src={call} height={25} alt="Contact" className='mx-2'/>
+        {children}
+    </Link>
+  )
+}
+
+export const WaButton = ({children, message}) => {
+  const phoneNumber = '+6282129100990';
+  return (
+    <Link 
+      className='bg-success-subtle text-dark text-nowrap border border-success' 
       to={`https://wa.me/${phoneNumber}?text=${message}`}
       style={{
         display: 'block',
@@ -15,11 +36,11 @@ export const ContactButton = ({children, message}) => {
         border: '0',
         paddingBlock:'.2em',
         paddingInline:'.5em',
-        margin:'1em',
+        marginTop:'1em',
         textDecoration:'none'
     }}>
-        {children}
         <img src={wa} height={25} alt="Contact" className='mx-2'/>
+        {children}
     </Link>
   )
 }
@@ -28,13 +49,13 @@ export const ConsultButton = ({children, message}) => {
   const phoneNumber = '+6282129100990';
   return (
     <Link 
-      className='bg-success-subtle text-dark text-nowrap' 
+      className='bg-success-subtle text-success text-nowrap border border-success' 
       to={`https://wa.me/${phoneNumber}?text=${message}`}
       style={{
-        borderRadius:'1em 1em 0 1em',
-        border: '0',
-        paddingBlock:'.3em',
-        paddingInline:'1em',
+        borderRadius:'1em .5em .5em 0',
+        paddingBlock:'.2em',
+        paddingInline:'.5em',
+        marginTop:'1em',
         textDecoration:'none'
     }}>
       <img src={wa} height={25} alt="Contact" className='mx-2'/>

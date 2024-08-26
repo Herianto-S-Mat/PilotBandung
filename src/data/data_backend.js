@@ -12,7 +12,28 @@ export const layanan =  fetch(`${baseUrl}/Jasa/Get_List_Jasa`, {
     }
     return response.json(); 
 })
-.then(data => {
+.then(({data}) => {
+    return data
+})
+.catch(error => {
+    console.error('Error fetching data:', error);
+});
+
+
+export const detail_jasa = (idjasa) => fetch(`${baseUrl}/Jasa/Get_Detail_Jasa_Filter?idjasa=${idjasa}`, {
+    method: 'GET', 
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    mode: 'cors' 
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json(); 
+})
+.then(({data}) => {
     return data
 })
 .catch(error => {
