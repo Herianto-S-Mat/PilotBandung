@@ -22,7 +22,7 @@ const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&lay
 
 export const CombinedMap = () => {
   const [showMap, setShowMap] = useState(false);
-
+   
   return (
     <Container>
       <Row>
