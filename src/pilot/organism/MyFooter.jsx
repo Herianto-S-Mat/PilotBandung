@@ -22,7 +22,7 @@ export const MyFooter = () => {
 	  }
 	);
 	}, []);
-	
+
   return (
 <Container fluid className="bg-dark bg-gradient text-warning mt-5" style={{borderRadius:'1em 1em 0 0'}}>
     <Row id='kontak-kami' className='pt-5 p-3'>
@@ -34,9 +34,11 @@ export const MyFooter = () => {
 				</p>				
 				<Alert variant='warning' className='text-wrap d-flex align-items-center'>
 					<span className='me-auto'>
-						{data_info.entity_name !== "Phone"
-						? `Visit our ${data_info.entity_name}`
-						: `Contact us via ${data_info.detail}`}
+						  {data_info.entity_name !== "Phone" && data_info.entity_name !== "Alamat"
+							? `Visit our ${data_info.entity_name}`
+							: data_info.entity_name === "Alamat"
+							? data_info.detail
+							: `Contact us via ${data_info.detail}`}
 					</span>
 					{['https://'].includes(data_info.detail.slice(0,8)) && (
 						<Button variant='none' className='ms-auto' href={data_info.detail}>
