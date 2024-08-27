@@ -31,15 +31,16 @@ export const MyFooter = () => {
 				<p className='mb-1 fs-5'>
 					{data_info.entity_name}
 				</p>				
-				<Alert variant='warning' className='text-wrap d-flex '>
-					{data_info.detail}
-					{['https://'].includes(data_info.detail.slice(0,8)) &&
-						// <div className='bg-light mt-2'>
-							<Button variant='none' className='ms-auto' href={data_info.detail}>
-								 <img src={go_to_page} alt="link" />
-								  {/* { data_info.entity_name }								  */}
-							</Button>
-						/* </div> */
+				<Alert variant='warning' className='text-wrap d-flex align-items-center'>
+					<span className='me-auto'>
+						{data_info.entity_name !== "Phone"
+						? `Visit our ${data_info.entity_name}`
+						: `Contact us via ${data_info.detail}`}
+					</span>
+					{['https://'].includes(data_info.detail.slice(0,8)) && (
+						<Button variant='none' className='ms-auto' href={data_info.detail}>
+						<img src={go_to_page} alt="link" />
+						</Button>)
 					}
 					{data_info.entity_name=='Alamat'
 						&& createPortal(

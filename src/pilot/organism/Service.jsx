@@ -31,12 +31,12 @@ export const Service = () => {
     }, []);
 	return (		
 		<div className="container text-center">
-		<div className="row">
-		{services.map((service) => (
-		  <div className="col-12 col-md-6 col-lg" key={service.no_jasa}>
-			<Alert variant={'warning'}>
-				<h3 className='py-3 mb-3 text-start border-bottom border-2 border-dark'>{service.judul}</h3>
-				<p className=' mb-2 text-start text-justify'>
+			<div className="row d-flex align-items-stretch">
+				{services.map((service) => (
+				<div className="col-12 col-md-6 col-lg d-flex" key={service.no_jasa}>
+					<Alert variant={'warning'} className="w-100">
+					<h5 className='py-3 mb-3 text-start border-bottom border-2 border-dark'>{service.judul}</h5>
+					<p className='mb-2 text-start text-justify'>
 					{service.url_gambar}
 					<br />
 					<a className='text-decoration-underline' onClick={() => setShow(service.no_jasa)}>{'baca selengkapnya'}</a>
