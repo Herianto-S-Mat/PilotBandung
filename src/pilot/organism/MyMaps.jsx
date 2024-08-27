@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 
 // Define map center coordinates for Bandung
-const center = [-6.9478, 107.6410]; // Latitude and Longitude of Bandung
+const center = [-6.9479, 107.6415];
 
 // Update bbox to ensure it includes the marker
 const bbox = [
