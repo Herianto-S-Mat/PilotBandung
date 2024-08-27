@@ -27,7 +27,7 @@ export const MyFooter = () => {
 <Container fluid className="bg-dark bg-gradient text-warning mt-5" style={{borderRadius:'1em 1em 0 0'}}>
     <Row id='kontak-kami' className='pt-5 p-3'>
 		{data.filter((info)=> info.entity_name!='Copyright' ).map((data_info, index) => (
-			<Col md={6} xxl={3} key={index}  style={{ display: data_info.entity_name.includes('google') ? 'none' : '' }}>
+			<Col md={6} xxl={3} key={index}  style={{ display: data_info.entity_name.includes('kantor') ? 'none' : '' }}>
 			{/* <span className='pb-2' key={index}> */}
 				<p className='mb-1 fs-5'>
 					{data_info.entity_name}
@@ -45,7 +45,7 @@ export const MyFooter = () => {
 						<img src={go_to_page} alt="link" />
 						</Button>)
 					}
-					{data_info.entity_name.includes('google')
+					{data_info.entity_name.includes('kantor')
 						&& createPortal(
 							<div className='d-flex mt-3'>
 								<Button variant='dark' className=' mx-auto' href={data_info.detail}>
