@@ -22,6 +22,7 @@ export const MyFooter = () => {
 	  }
 	);
 	}, []);
+	
   return (
 <Container fluid className="bg-dark bg-gradient text-warning mt-5" style={{borderRadius:'1em 1em 0 0'}}>
     <Row id='kontak-kami' className='pt-5 p-3'>

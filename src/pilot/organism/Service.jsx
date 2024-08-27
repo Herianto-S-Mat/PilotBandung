@@ -10,7 +10,6 @@ import { ModalService } from './ModalService';
 export const Service = () => {
 	const [show, setShow] = useState(null);
   
-  
 	const handleClose = () => setShow(null);
 
 	const [services, setServices] = useState([]);
