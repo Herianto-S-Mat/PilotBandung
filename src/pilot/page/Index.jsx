@@ -7,7 +7,8 @@ import { Service } from '../organism/Service'
 import { Section } from '../template/Section'
 import { OperationalHours } from '../organism/OperationalHours'
 import { Testimoni } from '../organism/Testimoni'
-import { MyMaps, MapComponent } from '../organism/MyMaps'
+// import { MyMaps, MapComponent } from '../organism/MyMaps'
+import { CombinedMap } from '../organism/MyMaps'
 
 export const Index = () => {
   return (
@@ -20,7 +21,7 @@ export const Index = () => {
       <OperationalHours/>
     </Section>
     <Section title='Lokasi Kami'>
-      <MyMaps/>
+      <CombinedMap/>
       {/* <MapComponent/> */}
     </Section>
     <Section title='Galeri'>
