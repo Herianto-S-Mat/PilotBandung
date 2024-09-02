@@ -37,15 +37,17 @@ export const ModalService = ({ show, handleClose, jasa })=> {
         {
           data.map((jasa_detail,i)=>(
             <div key={i} className='text-dark bg-light border border-dark rounded mt-4'>
-              <h4 className='p-2 border-2 border-bottom border-dark'>{jasa_detail.judul}</h4>
-              {/* <img 
-                src={viteLogo} 
-                alt="we" 
-                className='p-2 rounded' 
-                style={{ width: '100%', maxWidth: '400px' }} 
-              /> */}
               <div className='text-justify p-2'>
-                <p dangerouslySetInnerHTML={{ __html: jasa_detail.deskripsi }} />
+                <p style={{maxHeight:'250px'}}>
+                  <h4 className='p-2 border-2 border-bottom border-dark'>{jasa_detail.judul}</h4>
+                  <img 
+                    src={viteLogo} 
+                    alt="we" 
+                    className='p-2 rounded float-end me-3 rounded' 
+                    style={{ width: '100%', maxWidth: '200px' }} 
+                  />
+                  <span dangerouslySetInnerHTML={{ __html: jasa_detail.deskripsi }} />
+                </p>
               </div>
             </div>
           ))
