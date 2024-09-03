@@ -19,7 +19,6 @@ export const ModalService = ({ show, handleClose, jasa })=> {
     }
   );
   },[]);
-  console.log(data)
   return (
     <Modal 
       show={show} 

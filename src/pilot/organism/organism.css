@@ -98,22 +98,16 @@
     text-align: center; 
 }
 
+.react-multiple-carousel__arrow--right ,
 .react-multiple-carousel__arrow--left {
-    position: absolute;
-    left: 0;
-    /* left: 50% !important; */
-    width: max-content;
-    transform: translatex(0);
-    margin-inline: 0;
+    border:5px solid  rgb(255, 255, 255) !important;
+    background-color: black !important;
 }
 
-.react-multiple-carousel__arrow--right {
-    position: absolute;
-    right: 0;
-    /* right: 50% !important; */
-    width: max-content;
-    transform: translatex(0);
-    margin-inline: 0;
+.react-multiple-carousel__arrow--left::before,
+.react-multiple-carousel__arrow--right::before
+ {
+    color: white !important;
 }
 
 .text-justify {

@@ -6,8 +6,7 @@ import { Page } from '../template/page'
 import { Service } from '../organism/Service'
 import { Section } from '../template/Section'
 import { OperationalHours } from '../organism/OperationalHours'
-import { Testimoni } from '../organism/Testimoni'
-// import { MyMaps, MapComponent } from '../organism/MyMaps'
+import { CorouselPicture } from '../organism/CorouselPicture'
 import { CombinedMap } from '../organism/MyMaps'
 
 export const Index = () => {
@@ -22,17 +21,13 @@ export const Index = () => {
     </Section>
     <Section title='Lokasi Kami'>
       <CombinedMap/>
-      {/* <MapComponent/> */}
     </Section>
     <Section title='Galeri'>
-      <Testimoni/>
+      <CorouselPicture/>
     </Section>
-    {/* <Section title='Testimoni'>
-      <Testimoni/>
-    </Section> */}
-    {/* <Section title='Kata Pelanggan'>
+    <Section title='Kata Pelanggan'>
       <Coment/>
-    </Section> */}
+    </Section>
 
   </Page>
   )
