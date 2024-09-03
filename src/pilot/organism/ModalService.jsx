@@ -3,7 +3,6 @@ import { detail_jasa } from '../../data/data_backend';
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './organism.css'
-import viteLogo from '/vite.svg'
 
 export const ModalService = ({ show, handleClose, jasa })=> {
   const [data, setData] = useState([]);
@@ -39,12 +38,12 @@ export const ModalService = ({ show, handleClose, jasa })=> {
               <div className='text-justify p-2'>
                 <p style={{maxHeight:'250px'}}>
                   <h4 className='p-2 border-2 border-bottom border-dark'>{jasa_detail.judul}</h4>
-                  <img 
+                  {/* <img 
                     src={viteLogo} 
                     alt="we" 
                     className='p-2 rounded float-end me-3 rounded' 
                     style={{ width: '100%', maxWidth: '200px' }} 
-                  />
+                  /> */}
                   <span dangerouslySetInnerHTML={{ __html: jasa_detail.deskripsi }} />
                 </p>
               </div>
