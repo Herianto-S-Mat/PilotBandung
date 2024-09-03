@@ -39,7 +39,7 @@ export const WaButton = ({children, message}) => {
         marginTop:'1em',
         textDecoration:'none'
     }}>
-        <img src={wa} height={25} alt="Contact" className='mx-2'/>
+        <img src={wa} height={25} alt="Contact wa" className='mx-2'/>
         {children}
     </Link>
   )
@@ -58,7 +58,7 @@ export const ConsultButton = ({children, message}) => {
         marginTop:'1em',
         textDecoration:'none'
     }}>
-      <img src={wa} height={25} alt="Contact" className='mx-2'/>
+      <img src={wa} height={25} alt="Contact wa" className='mx-2'/>
       {children}
     </Link>
   )

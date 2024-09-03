@@ -2,8 +2,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './organism.css'
 import placeholder_img from '/image.png';
-// import data from '../../data/gambar.json'
-import { Alert, AlertHeading } from 'react-bootstrap';
 import { pictures } from '../../data/data_backend';
 import { useEffect, useState } from 'react';
 
@@ -37,24 +35,18 @@ export const CorouselPicture = () => {
   useEffect(() => {
     pictures
       .then((picture) => {
-        // console.log(data)
         const new_data = picture.reduce((acc, item) => {
-          // Jika kelompok berdasarkan type belum ada, buat array baru
-          // console.log(item)
           if (!acc[item.tipe_gambar]) {
             acc[item.tipe_gambar] = [];
           }
-          // Tambahkan item ke dalam kelompok yang sesuai
           acc[item.tipe_gambar].push(item);
           return acc;
         }, {})
-        // console.log(new_data)
         setData(new_data);
       })
       .catch((error) => {
         console.error('Failed to fetch layanan data:', error);
       });
-    console.log(data)
   }, []);  
 
   return (

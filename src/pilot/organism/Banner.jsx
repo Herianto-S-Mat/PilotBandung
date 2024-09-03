@@ -1,4 +1,3 @@
-import gif from '/add.gif';
 import './organism.css';
 import { Container, Row } from 'react-bootstrap';
 import { banner, bannerpic } from '../../data/data_backend';
