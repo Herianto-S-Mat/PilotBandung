@@ -84,12 +84,12 @@ const ItemCorousel = ({data}) => {
       <img 
         alt="gambar"
         className='img-fluid rounded border border-dark'
-        style={{maxHeight:'260px'}}
+        style={{maxHeight:'260px', maxWidth:'70%'}}
         src={data.url_gambar?data.url_gambar:placeholder_img} 
       />
       <br />
       <div className='my-2 bg-dark-subtle rounded'>
-        <AlertHeading as={'b'}>{data.nama_gambar}</AlertHeading>
+        <b style={{textWrap:'wrap'}}>{data.nama_gambar}</b>
       </div>
     </>
   )
