@@ -82,10 +82,15 @@ const ItemCorousel = ({data}) => {
         // style={{maxHeight:'260px'}}
         src={data.url_gambar?data.url_gambar:placeholder_img} 
       />
-      {/* <br />
-      <div className='my-2 bg-dark-subtle rounded'>
-        <b style={{textWrap:'wrap'}}>{data.nama_gambar}</b>
-      </div> */}
+      {(data.nama_gambar!='-') && (
+        <>
+          <br />
+          <div className='my-2 bg-dark-subtle rounded'>
+            <b style={{textWrap:'wrap'}}>{data.nama_gambar}</b>
+          </div>
+        </>
+
+      )}
     </>
   )
 }
