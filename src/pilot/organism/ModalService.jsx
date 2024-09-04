@@ -36,7 +36,7 @@ export const ModalService = ({ show, handleClose, jasa })=> {
           data.map((jasa_detail,i)=>(
             <div key={i} className='text-dark bg-light border border-dark rounded mt-4'>
               <div className='text-justify p-2'>
-                <p style={{maxHeight:'250px'}}>
+                <p>
                   <h4 className='p-2 border-2 border-bottom border-dark'>{jasa_detail.judul}</h4>
                   {/* <img 
                     src={viteLogo} 
