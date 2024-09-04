@@ -3,9 +3,8 @@ import { Container } from 'react-bootstrap'
 
 export const Section = ({children, title, id = null}) => {
   return (
-    <Container id={id ? id : undefined}>
-        <div 
-            className='' 
+    <Container fluid id={id ? id : undefined}>
+        <div  
             style={{
                 display:'flex',
                 flexDirection:'row',

@@ -25,10 +25,9 @@ export const MyFooter = () => {
 
   return (
 <Container fluid className="bg-dark bg-gradient text-warning mt-5" style={{borderRadius:'1em 1em 0 0'}}>
-    <Row id='kontak-kami' className='pt-5 p-3'>
+    <Row id='kontak-kami' className='pt-5 p-3 w-100'>
 		{data.filter((info)=> info.entity_name!='Copyright' ).map((data_info, index) => (
 			<Col md={6} xxl={3} key={index}  style={{ display: data_info.entity_name.includes('google') ? 'none' : '' }}>
-			{/* <span className='pb-2' key={index}> */}
 				<p className='mb-1 fs-5'>
 					{data_info.entity_name}
 				</p>				
@@ -76,7 +75,6 @@ export const MyFooter = () => {
 						) 
 					}
 				</Alert>
-			{/* </span> */}
 			</Col>
 		))}
     </Row>
