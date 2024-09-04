@@ -48,25 +48,30 @@ export const CorouselPicture = () => {
         console.error('Failed to fetch layanan data:', error);
       });
   }, []);  
-
+  
   return (
     <>
-    {
-      Object.keys(data).map((type, i)=>(
-        <div className='mb-5' key={i}>
-          <h5 className='mx-5  border  border-dark bg-secondary text-light rounded p-2'>({data[type].length}) {type}</h5>
-          <Carousel responsive={responsive} className='mx-5'>
-            {data[type].map((data, i)=>(
-              <div key ={i} className='text-center mx-2 rounded p-1'>
-                <ItemCorousel data ={data}/>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      ))
-    }
+      {
+        Object.keys(data)
+          .filter(type => !['banner', 'logo', 'About Us'].includes(type))
+          .map((type, i) => (
+            <div className='mb-5' key={i}>
+              <h5 className='mx-5 border border-dark bg-secondary text-light rounded p-2'>
+                ({data[type].length}) {type}
+              </h5>
+              <Carousel responsive={responsive} className='mx-5'>
+                {data[type].map((item, j) => (
+                  <div key={j} className='text-center mx-2 rounded p-1'>
+                    <ItemCorousel data={item} />
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          ))
+      }
     </>
   );
+  
 }
 
 
