@@ -82,7 +82,7 @@ const ItemCorousel = ({data}) => {
         // style={{maxHeight:'260px'}}
         src={data.url_gambar?data.url_gambar:placeholder_img} 
       />
-      {(data.nama_gambar!='-') && (
+      {(!['-', '', 'hide','Hide', '_'].includes(data.nama_gambar)) && (
         <>
           <br />
           <div className='my-2 bg-dark-subtle rounded'>
