@@ -1,5 +1,5 @@
 import { Container} from 'react-bootstrap'
-import BrandLogo from '/untitled.ico'
+import BrandLogo from '/untitled.png'
 export const ErrorPage = () => {
   return (
       <Container fluid className="d-flex justify-content-center align-items-center vh-100 vw-100">
