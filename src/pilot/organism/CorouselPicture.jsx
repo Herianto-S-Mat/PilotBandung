@@ -56,9 +56,7 @@ export const CorouselPicture = () => {
           .filter(type => !['banner', 'logo', 'About Us'].includes(type))
           .map((type, i) => (
             <div className='mb-5' key={i}>
-              <h5 className='mx-5 border border-dark bg-secondary text-light rounded p-2'>
-                ({data[type].length}) {type}
-              </h5>
+              <h5 className='mx-5 border border-dark bg-warning-subtle text-light rounded p-2'> {type} </h5>
               <Carousel responsive={responsive} className='mx-5'>
                 {data[type].map((item, j) => (
                   <div key={j} className='text-center mx-2 rounded p-1'>
@@ -81,7 +79,7 @@ const ItemCorousel = ({data}) => {
       <img 
         alt="gambar"
         className='img-fluid rounded border border-dark'
-        style={{maxHeight:'260px', maxWidth:'70%'}}
+        // style={{maxHeight:'260px'}}
         src={data.url_gambar?data.url_gambar:placeholder_img} 
       />
       {/* <br />
