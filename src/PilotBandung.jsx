@@ -15,17 +15,6 @@ const router = createBrowserRouter([
     element: <Index/>,
     errorElement: <ErrorPage />,
   },
-  {
-    path: "/Home",
-    element: <Index/>,
-    // errorElement: <ErrorPage />,
-  },
-  // {
-  //   path: "/:jasa",
-  //   element: <Jasa/>,
-  //   errorElement: <ErrorPage />,
-  // },
-  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
