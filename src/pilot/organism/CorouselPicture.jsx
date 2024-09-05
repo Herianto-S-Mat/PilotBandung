@@ -1,7 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './organism.css'
-import placeholder_img from '/image.png';
+import failed_img from '/failed-img.jpg';
 import { pictures } from '../../data/data_backend';
 import { useEffect, useState } from 'react';
 
@@ -79,8 +79,8 @@ const ItemCorousel = ({data}) => {
       <img 
         alt="gambar"
         className='img-fluid rounded border border-dark'
-        // style={{maxHeight:'260px'}}
-        src={data.url_gambar?data.url_gambar:placeholder_img} 
+        src={data.url_gambar} 
+        onError={(e) => e.target.src = failed_img}
       />
       {(!['-', '', 'hide','Hide', '_'].includes(data.nama_gambar)) && (
         <>

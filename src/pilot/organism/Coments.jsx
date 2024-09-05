@@ -47,13 +47,15 @@ export const Coment = () => {
 
   // const coment = data
   return (
-    <Carousel responsive={responsive} className='pt-5'>
-      {data.map((data, i)=>(
-        // <div key ={i} className='text-center .corousel-multi-item alert alert-dark mx-2'>
-        <div key ={i} className='.corousel-multi-item mx-2 border rounded p-2'>
-          <ItemCorousel data ={data}/>
-        </div>
-      ))}
+    <Carousel responsive={responsive} className='pb-5'>
+      {data
+        .filter(item => item.toggle)  // Filter hanya item dengan toggle bernilai true
+        .map((data, i) => (
+          <div key={i} className="corousel-multi-item mx-2 border rounded p-2 shadow bg-warning-subtle">
+            <ItemCorousel data={data} />
+          </div>
+        ))
+      }
     </Carousel>
   );
 }
@@ -68,7 +70,8 @@ const ItemCorousel = ({data}) => {
           <i className='fst-italic small'>{data.kota_asal}</i>
         </div>
         <img 
-          src={data.url_foto !== '-' ? data.url_foto : placeholder_img} 
+          src={data.url_foto} 
+          onError={(e) => e.target.src = placeholder_img}
           style={{
             width: '100px', 
             height: '100px', 
@@ -90,14 +93,23 @@ const ItemCorousel = ({data}) => {
           }}
           className='bg-light p-2 rounded'
         >
-          {data.testimoni}
+          {data.kritik_saran}
         </p>
         <div className='d-flex justify-content-between'>
           <div className='fst-bold'>
-            Rental mobil + driver
+            {data.jasa}
           </div>
           <div>
-            ❤️❤️❤️🩶🩶
+          {Array(data.rating)
+              .fill()
+              .map((_, index) => (
+                <span key={index}>❤️</span>
+          ))}
+          {Array(5-data.rating)
+              .fill()
+              .map((_, index) => (
+                <span key={index}>🩶</span>
+          ))}
           </div>
         </div>
       </div>
@@ -106,7 +118,7 @@ const ItemCorousel = ({data}) => {
 }
 
 
-const ItemCorouselC = ({data}) => {
+const ItemCorouselc = ({data}) => {
   return (
     <>
       <img 
@@ -128,7 +140,7 @@ const ItemCorouselC = ({data}) => {
           textAlign:'justify',
           marginInline:'1em'
         }}>
-          {data.testimoni}
+          {data.kritik_saran}
         </p>
       </div>
     </>
