@@ -27,6 +27,7 @@ export const Index = () => {
       <Coment/>
     </Section> */}
 
+
   </Page>
   )
 }
