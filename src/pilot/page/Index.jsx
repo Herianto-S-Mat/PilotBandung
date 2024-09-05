@@ -23,9 +23,9 @@ export const Index = () => {
     <Section title='Galeri'>
       <CorouselPicture/>
     </Section>
-    {/* <Section title='Kata Pelanggan'>
+    <Section title='Kata Pelanggan'>
       <Coment/>
-    </Section> */}
+    </Section>
 
   </Page>
   )
