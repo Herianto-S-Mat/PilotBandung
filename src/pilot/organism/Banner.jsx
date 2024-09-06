@@ -31,7 +31,7 @@ export const Banner = () => {
   const backgroundImageUrl = picture.url_gambar ? `url(${picture.url_gambar})` : '';
 
   return (
-    <Container style={{ textAlign: 'center' }}>
+    <Container fluid style={{ textAlign: 'center', padding: 0, margin: 0 }}>
       <Row
         style={{
           backgroundImage: backgroundImageUrl,
@@ -39,6 +39,8 @@ export const Banner = () => {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           borderRadius: '0 0 1em 1em',
+          margin: '0',
+          width: '100%',
         }}
       >
         <div
@@ -49,6 +51,7 @@ export const Banner = () => {
             justifyContent: 'center',
             minHeight: '400px',
             borderRadius: '0 0 1em 1em',
+            width: '100%',
           }}
           className='vh-100 bg-dark bg-opacity-75 text-light'
         >
@@ -69,6 +72,6 @@ export const Banner = () => {
           </div>
         </div>
       </Row>
-    </Container>
+    </Container>  
   );
 };

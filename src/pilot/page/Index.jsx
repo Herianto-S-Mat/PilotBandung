@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Banner} from '../organism/Banner'
 import { Coment } from '../organism/Coments'
 import { Page } from '../template/page'
 import { Service } from '../organism/Service'
@@ -12,7 +11,6 @@ import { CombinedMap } from '../organism/MyMaps'
 export const Index = () => {
   return (
   <Page>
-    <Banner/>
     <Section title='Layanan Kami' id="layanan">
       <Service/>
     </Section>
@@ -28,6 +26,7 @@ export const Index = () => {
     {/* <Section title='Kata Pelanggan'>
       <Coment/>
     </Section> */}
+
 
   </Page>
   )

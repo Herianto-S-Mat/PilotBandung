@@ -2,7 +2,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './organism.css'
 import placeholder_img from '/image.png';
-import data from '../../data/coment.json'
+// import data from '../../data/coment.json'
+import { testimoni } from '../../data/data_backend';
+import { useEffect, useState } from 'react';
 
 
 const responsive = {
@@ -29,11 +31,26 @@ const responsive = {
 };
 
 export const Coment = () => {
-  const coment = data
+  const [data, setData] = useState([]);
+
+  
+  useEffect(() => {
+    testimoni
+      .then((data_testimoni) => {
+        console.log(data_testimoni)
+        setData(data_testimoni);
+      })
+      .catch((error) => {
+        console.error('Failed to fetch layanan data:', error);
+      });
+  }, []);
+
+  // const coment = data
   return (
     <Carousel responsive={responsive} className='pt-5'>
-      {coment.map((data, i)=>(
-        <div key ={i} className='text-center .corousel-multi-item alert alert-dark mx-2'>
+      {data.map((data, i)=>(
+        // <div key ={i} className='text-center .corousel-multi-item alert alert-dark mx-2'>
+        <div key ={i} className='.corousel-multi-item mx-2 border rounded p-2'>
           <ItemCorousel data ={data}/>
         </div>
       ))}
@@ -45,25 +62,73 @@ export const Coment = () => {
 const ItemCorousel = ({data}) => {
   return (
     <>
+      <div className='d-flex align-items-center'>
+        <div className='w-100 text-end px-2'>
+          <h5>{data.nama}</h5>
+          <i className='fst-italic small'>{data.kota_asal}</i>
+        </div>
+        <img 
+          src={data.url_foto !== '-' ? data.url_foto : placeholder_img} 
+          style={{
+            width: '100px', 
+            height: '100px', 
+            // borderRadius: '20%', 
+            border: '1px solid yellow',
+            // boxShadow: '0 2px 4px',
+            objectFit: 'cover' // Ensures the image maintains aspect ratio
+          }}
+          alt="Profile"
+          className='rounded border border-light'
+        />
+      </div>
+      <div className='pt-2'>
+        <p 
+          style={{
+            textAlign:'justify',
+            // marginInline:'1em',
+            minHeight:'5em'
+          }}
+          className='bg-light p-2 rounded'
+        >
+          {data.testimoni}
+        </p>
+        <div className='d-flex justify-content-between'>
+          <div className='fst-bold'>
+            Rental mobil + driver
+          </div>
+          <div>
+            ❤️❤️❤️🩶🩶
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+
+const ItemCorouselC = ({data}) => {
+  return (
+    <>
       <img 
-        src={data.url?data.url:placeholder_img} 
+        src={data.url_foto!='-'?data.url_foto:placeholder_img} 
         style={{
           width:'100px', 
           height:'100px', 
           transform:'translateY(-50px)', 
           borderRadius:'50%', 
-          border:'5px solid white'
+          border:'1px solid yellow',
+          boxShadow:'0 2px 4px 4px white'
         }}
       />
       <div style={{transform:'translateY(-40px)'}}>
-        <h5>{data.name}</h5>
-        <i>" {data.title} "</i>
+        <h5>{data.nama}</h5>
+        <i>" {data.kota_asal} "</i>
         <br/>
         <p style={{
           textAlign:'justify',
           marginInline:'1em'
         }}>
-          {data.comentnya}
+          {data.testimoni}
         </p>
       </div>
     </>

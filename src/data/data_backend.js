@@ -121,3 +121,23 @@ export const pictures =  fetch(`${baseUrl}/Gambar/ListGambar`, {
 .catch(error => {
     console.error('Error fetching data:', error);
 });
+
+export const testimoni =  fetch(`${baseUrl}/Testimoni/ListTestimoni`, {
+    method: 'GET', 
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    mode: 'cors' 
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json(); 
+})
+.then(({data}) => {
+    return data
+})
+.catch(error => {
+    console.error('Error fetching data:', error);
+});
