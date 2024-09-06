@@ -11,7 +11,6 @@ const bbox = [
   center[0] + offset, // maxLat
 ].join(',');
 
-
 // Embed map URL with marker
 const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${center[0]},${center[1]}`;
 
