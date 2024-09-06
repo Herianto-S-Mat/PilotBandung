@@ -28,7 +28,7 @@ export const CombinedMap = () => {
     <Container>
       <Row>
         <div style={styles.mapRoot}>
-          <iframe
+        <iframe
             title="Embedded Map"
             width="100%"
             height="100%"
@@ -36,6 +36,7 @@ export const CombinedMap = () => {
             style={{ border: 0 }}
             src={mapUrl}
             allowFullScreen
+            key={mapUrl} // Adding a key prop to force re-render
           ></iframe>
         </div>
       </Row>
