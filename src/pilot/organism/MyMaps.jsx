@@ -36,7 +36,6 @@ export const CombinedMap = () => {
             style={{ border: 0 }}
             src={mapUrl}
             allowFullScreen
-            key={mapUrl} // Adding a key prop to force re-render
           ></iframe>
         </div>
       </Row>
