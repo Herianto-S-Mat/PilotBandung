@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 
-// Define map center coordinates for Bandung
 const center = [-6.9479, 107.6415];
+const offset = 0.01; // Smaller offset for zooming in
 
-// Update bbox to ensure it includes the marker
 const bbox = [
-  center[1] - 0.0008, // minLng
-  center[0] - 0.0008, // minLat
-  center[1] + 0.0008, // maxLng
-  center[0] + 0.0008, // maxLat
+  center[1] - offset, // minLng
+  center[0] - offset, // minLat
+  center[1] + offset, // maxLng
+  center[0] + offset, // maxLat
 ].join(',');
+
 
 // Embed map URL with marker
 const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${center[0]},${center[1]}`;
