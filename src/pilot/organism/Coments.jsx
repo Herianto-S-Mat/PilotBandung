@@ -5,6 +5,8 @@ import placeholder_img from '/image.png';
 // import data from '../../data/coment.json'
 import { testimoni } from '../../data/data_backend';
 import { useEffect, useState } from 'react';
+import true_star from '/star1.svg'
+import false_star from '/star0.svg'
 
 
 const responsive = {
@@ -37,7 +39,6 @@ export const Coment = () => {
   useEffect(() => {
     testimoni
       .then((data_testimoni) => {
-        console.log(data_testimoni)
         setData(data_testimoni);
       })
       .catch((error) => {
@@ -100,16 +101,13 @@ const ItemCorousel = ({data}) => {
             {data.jasa}
           </div>
           <div>
-          {Array(data.rating)
-              .fill()
-              .map((_, index) => (
-                <span key={index}>❤️</span>
-          ))}
-          {Array(5-data.rating)
-              .fill()
-              .map((_, index) => (
-                <span key={index}>🩶</span>
-          ))}
+          {Array(5) // Mengasumsikan 5 bintang secara total
+            .fill()
+            .map((_, index) => (
+              index < data.rating 
+                ? <img key={index} src={true_star} alt="star" /> 
+                : <img key={index} src={false_star} alt="star" />
+            ))}
           </div>
         </div>
       </div>
