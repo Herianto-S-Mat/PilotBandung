@@ -104,33 +104,33 @@ export const GalleryMasonry = () => {
   }, []);  
 
   return (
-    <Container className="my-5">
+    <Container className="mt-5">
       {
         Object.keys(data)
-          .filter(type => !['banner', 'logo', 'About Us'].includes(type))
+          .filter(type => !['banner'.toUpperCase(), 'logo'.toUpperCase(), 'About Us'.toUpperCase()].includes(type.toUpperCase()))
           .map((type, i) => (
-            <div className='mb-5' key={i}>
-              <h5 className='border border-dark bg-dark text-warning rounded p-2'> {type.toUpperCase()} </h5>
+            <div className='mt-3' key={i}>
+              <h5 className='border border-dark bg-dark text-warning rounded p-2 text-center'> {type.toUpperCase()} </h5>
               <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {data[type].map((foto, j) => (
-          <Card key={j} className="mb-2 bg-warning-subtle border-warning">
-            <Card.Img variant="top" 
-              src={foto.url_gambar} 
-              onError={(e) => e.target.src = failed_img} 
-              alt={foto.title} 
-            />
-            {(!['-', '', 'hide','Hide', '_'].includes(foto.nama_gambar)) && (
-            <Card.Body>
-              <Card.Title>{foto.nama_gambar}</Card.Title>
-            </Card.Body>
-            )}
-          </Card>
-        ))}
-      </Masonry>
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+              >
+                {data[type].map((foto, j) => (
+                  <Card key={j} className="mb-2 bg-warning-subtle border-warning overflow-hidden">
+                    <Card.Img variant="top" 
+                      src={foto.url_gambar} 
+                      onError={(e) => e.target.src = failed_img} 
+                      alt={foto.title} 
+                    />
+                    {(!['-', '', 'hide','Hide', '_'].includes(foto.nama_gambar)) && (
+                    <Card.Body>
+                      <Card.Title>{foto.nama_gambar}</Card.Title>
+                    </Card.Body>
+                    )}
+                  </Card>
+                ))}
+              </Masonry>
             </div>
           ))
       }

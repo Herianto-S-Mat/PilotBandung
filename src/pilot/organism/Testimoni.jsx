@@ -32,7 +32,7 @@ const responsive = {
   },
 };
 
-export const Coment = () => {
+export const Testimoni = () => {
   const [data, setData] = useState([]);
 
   

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Coment } from '../organism/Coments'
+import { Testimoni } from '../organism/Testimoni'
 import { Page } from '../template/page'
 import { Service } from '../organism/Service'
 import { Section } from '../template/Section'
@@ -25,8 +25,8 @@ export const Index = () => {
       {/* <CorouselPicture/> */}
       <GalleryMasonry />
     </Section>
-    <Section title='Kata Pelanggan'>
-      <Coment/>
+    <Section title='Kata Pelanggan Kami'>
+      <Testimoni/>
     </Section>
 
 

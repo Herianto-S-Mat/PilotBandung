@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
 
 // Define map center coordinates for Bandung
 const center = [-6.9479, 107.6415];
@@ -33,14 +33,19 @@ export const CombinedMap = () => {
             title="Embedded Map"
             width="100%"
             height="100%"
-            frameBorder="0"
-            style={{ border: 0 }}
+            className='rounded border border-2 border-dark'
             src={mapUrl}
             allowFullScreen
           ></iframe>
         </div>
       </Row>
-      <Row id='button-section-alamat'></Row>
+      <Row id='button-section-alamat'>
+      <div className='d-flex mt-3'>
+        <Button variant='dark' className=' mx-auto' href={mapUrl}>
+            LIHAT ALAMAT DI MAPS
+          </Button>
+        </div>
+      </Row>
     </Container>
   );
 };

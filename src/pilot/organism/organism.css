@@ -72,7 +72,7 @@
     margin-block:2em 6em;
 }
 
-.carousel-indicators [data-bs-target] {
+/* .carousel-indicators [data-bs-target] {
     width: 35px;
     height: 15px;
     opacity: 1;
@@ -83,7 +83,7 @@
 .carousel-indicators .active {
     border: 3px solid rgb(252, 194, 46);
     background-color:rgb(254, 252, 244);
-}
+} */
 
 .text-wrap {
     word-break: break-all;
@@ -97,6 +97,7 @@
 .react-multiple-carousel__arrow--left {
     border:5px solid  rgb(255, 255, 255) !important;
     background-color: black !important;
+    opacity: 40%;
 }
 
 .react-multiple-carousel__arrow--left::before,

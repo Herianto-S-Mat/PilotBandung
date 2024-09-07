@@ -24,7 +24,7 @@ export const MyFooter = () => {
 	}, []);
 
   return (
-<Container fluid className="bg-dark bg-gradient text-warning" style={{borderRadius:'1em 1em 0 0'}}>
+<Container fluid className="bg-dark bg-gradient text-warning mt-5" style={{borderRadius:'1em 1em 0 0'}}>
     <Row id='kontak-kami' className='pt-5 p-3 w-100'>
 		{data.filter((info)=> info.entity_name!='Copyright' ).map((data_info, index) => (
 			<Col md={6} xxl={3} key={index}  style={{ display: data_info.entity_name.includes('google') ? 'none' : '' }}>
@@ -43,18 +43,6 @@ export const MyFooter = () => {
 						<Button variant='none' className='ms-auto' href={data_info.detail}>
 						<img src={go_to_page} alt="link" />
 						</Button>)
-					}
-					{data_info.entity_name.includes('google')
-						&& createPortal(
-							<div className='d-flex mt-3'>
-								<Button variant='dark' className=' mx-auto' href={data_info.detail}>
-									LIHAT ALAMAT DI MAPS
-								</Button>
-							</div>
-							,
-							document.getElementById('button-section-alamat')
-							
-						) 
 					}
 					{data_info.entity_name=='Phone'
 						&& createPortal(
