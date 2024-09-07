@@ -7,6 +7,7 @@ import { Section } from '../template/Section'
 import { OperationalHours } from '../organism/OperationalHours'
 import { CorouselPicture } from '../organism/CorouselPicture'
 import { CombinedMap } from '../organism/MyMaps'
+import { GalleryMasonry } from '../organism/CorouselPictureMansory'
 
 export const Index = () => {
   return (
@@ -21,7 +22,8 @@ export const Index = () => {
       <CombinedMap/>
     </Section>
     <Section title='Galeri'>
-      <CorouselPicture/>
+      {/* <CorouselPicture/> */}
+      <GalleryMasonry />
     </Section>
     <Section title='Kata Pelanggan'>
       <Coment/>
