@@ -13,7 +13,7 @@ export const Page = ({children}) => {
             {children}
         </Main>
         <MyFooter/>
-        <ContactMe/>
+        {/* <ContactMe/> */}
     </>
   )
 }
