@@ -22,8 +22,8 @@ export const Index = () => {
       <CombinedMap/>
     </Section>
     <Section title='Galeri'>
-      {/* <CorouselPicture/> */}
-      <GalleryMasonry />
+      <CorouselPicture/>
+      {/* <GalleryMasonry /> */}
     </Section>
     <Section title='Kata Pelanggan Kami'>
       <Testimoni/>
