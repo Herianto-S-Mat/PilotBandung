@@ -45,6 +45,9 @@ export const MyFooter = () => {
     } else {
       // Jika ada overlay lain yang aktif, nonaktifkan dan aktifkan yang baru
       setActiveOverlay(id);
+	  setTimeout(() => {
+		setActiveOverlay(null);
+	  }, 20000);
     }
   };
   
@@ -123,7 +126,7 @@ export const MyFooter = () => {
     </div>
 	<Row className='p-3'>
 	{data.filter((info)=> info.entity_name=='Copyright').map((data_info, index) => (
-		<div className='text-center text-warning' key={index}>
+		<div className='text-center text-warning fs-6' key={index}>
 			<b>{data_info.entity_name} @ </b>
 			<a>{data_info.detail}</a>
 		</div>
