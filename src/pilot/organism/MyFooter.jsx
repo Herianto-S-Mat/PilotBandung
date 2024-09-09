@@ -67,7 +67,8 @@ export const MyFooter = () => {
 								<div className='mb-3 w-full d-flex justify-content-center'>
 									<ButtonToolbar className="position-relative">
 										<ButtonGroup size="sm">
-										{['Instagram','WhatsApp'].includes(data_info.entity_name)&& <Button variant="none" className="text-warning border border-warning" href={data_info.detail}>lihat</Button>}
+										{['Instagram'].includes(data_info.entity_name)&& <Button variant="none" className="text-warning border border-warning" href={data_info.detail}>lihat</Button>}
+										{['WhatsApp'].includes(data_info.entity_name)&& <Button variant="none" className="text-warning border border-warning" href={data_info.detail}>chat</Button>}
 										{['Phone'].includes(data_info.entity_name) && <Button variant="none" className="text-warning border border-warning" href={`tel:${data_info.detail}`}>panggil</Button>}
 										<Button variant="none" className="text-warning border border-warning"  onClick={()=>handleCopy(data_info.detail)}>Salin</Button>
 										 {copied && 
