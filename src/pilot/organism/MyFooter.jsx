@@ -1,11 +1,10 @@
 import React from 'react';
-import { Container, Row, Col, Alert, Button, Tooltip, OverlayTrigger, ButtonToolbar, ButtonGroup } from 'react-bootstrap';
+import { Container, Row, Button, Tooltip, OverlayTrigger, ButtonToolbar, ButtonGroup } from 'react-bootstrap';
 import { info } from '../../data/data_backend';
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import './organism.css'
 import { ContactButton, WaButton } from './MyButton';
-import go_to_page from '/goto_page.svg'
 
 export const MyFooter = () => {
 	const [data, setData] = useState([]);

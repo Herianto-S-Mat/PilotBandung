@@ -88,20 +88,18 @@ const ItemCorousel = ({data}) => {
       <div className='pt-2'>
         <p 
           style={{
-            textAlign:'justify',
-            // marginInline:'1em',
+
             minHeight:'5em'
           }}
           className='bg-light p-2 rounded'
-        >
-          {data.kritik_saran}
-        </p>
+          dangerouslySetInnerHTML={{ __html: data.kritik_saran.replace(/\n/g, '<br />') }} 
+        />
         <div className='d-flex justify-content-between'>
           <div className='fst-bold'>
             {data.jasa}
           </div>
           <div>
-          {Array(5) // Mengasumsikan 5 bintang secara total
+          {Array(5)
             .fill()
             .map((_, index) => (
               index < data.rating 
