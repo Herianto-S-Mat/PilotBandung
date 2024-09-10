@@ -53,8 +53,9 @@ export const Banner = () => {
             borderRadius: '0 0 1em 1em',
             width: '100%',
           }}
-          className='vh-100 bg-dark bg-opacity-75 text-light'
+          className='min-vh-100 bg-dark bg-opacity-75 text-light d-flex'
         >
+          {picture.url_gambar &&<img src={picture.url_gambar} className='rounded border border-2 border-white mx-auto my-5' style={{maxWidth:'200px', maxHeight:'80vh'}} />}
           <h3>Welcome To</h3>
           <h1 className='py-3' style={{ fontSize: '2.5em' }}>{data.judul_jasa}</h1>
           <p>" {data.deskripsi_jasa} "</p>
@@ -66,7 +67,7 @@ export const Banner = () => {
               flexWrap: 'wrap',
               gap: '.5em',
             }}
-            className='pt-3 text-light'
+            className='pt-3 text-light pb-5'
           >
             {/* div#banner_button elemen target portal untuk button list jasa */}
           </div>
