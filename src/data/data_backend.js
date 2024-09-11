@@ -1,150 +1,60 @@
 const baseUrl = 'https://next-pig-game.ngrok-free.app/v1'
-export const layanan =  fetch(`${baseUrl}/Jasa/Get_List_Jasa`, {
+
+const headers = {
     method: 'GET', 
+    mode: 'cors', 
     headers: {
         'Content-Type': 'application/json',
         'ngrok-skip-browser-warning':'true'
     },
-    mode: 'cors' 
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+}
+
+const response_func = response => {
+    if (!response.ok) { throw new Error(`HTTP error! Status: ${response.status}`); }
     return response.json(); 
-})
-.then(({data}) => {
-    return data
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
+}
+
+const data = ({data}) => data 
+
+const error_func = error => console.error('Error fetching data:', error)
 
 
-export const detail_jasa = (idjasa) => fetch(`${baseUrl}/Jasa/Get_Detail_Jasa_Filter?idjasa=${idjasa}`, {
-    method: 'GET', 
-    headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning':'true'
-    },
-    mode: 'cors' 
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json(); 
-})
-.then(({data}) => {
-    return data
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
+export const layanan =  fetch(`${baseUrl}/Jasa/Get_List_Jasa`, headers)
+.then(response_func)
+.then(data)
+.catch(error_func);
 
-export const banner =  fetch(`${baseUrl}/BannerAbout/ListBannerAbout`, {
-    method: 'GET', 
-    headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning':'true'
-    },
-    mode: 'cors' 
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json(); 
-})
+
+export const detail_jasa = (idjasa) => fetch(`${baseUrl}/Jasa/Get_Detail_Jasa_Filter?idjasa=${idjasa}`, headers)
+.then(response_func)
+.then(data)
+.catch(error_func);
+
+export const banner =  fetch(`${baseUrl}/BannerAbout/ListBannerAbout`, headers)
+.then(response_func)
 .then((data) => {
     const {judul_jasa, deskripsi_jasa} = data.data[0]
     return {judul_jasa, deskripsi_jasa}
 })
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
+.catch(error_func);
 
-export const info =  fetch(`${baseUrl}/Information/ListInformation`, {
-    method: 'GET', 
-    headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning':'true'
-    },
-    mode: 'cors' 
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json(); 
-})
-.then(({data}) => {
-    return data
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
+export const info =  fetch(`${baseUrl}/Information/ListInformation`, headers)
+.then(response_func)
+.then(data)
+.catch(error_func);
 
 
-export const bannerpic =  fetch(`${baseUrl}/Gambar/ListGambarFilter?idgambar=1`, {
-    method: 'GET', 
-    headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning':'true'
-    },
-    mode: 'cors' 
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json(); 
-})
-.then(({data}) => {
-    return data
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
+export const bannerpic =  fetch(`${baseUrl}/Gambar/ListGambarFilter?idgambar=1`, headers)
+.then(response_func)
+.then(data)
+.catch(error_func);
 
-export const pictures =  fetch(`${baseUrl}/Gambar/ListGambar`, {
-    method: 'GET', 
-    headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning':'true'
-    },
-    mode: 'cors' 
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json(); 
-})
-.then(({data}) => {
-    return data
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
+export const pictures =  fetch(`${baseUrl}/Gambar/ListGambar`, headers)
+.then(response_func)
+.then(data)
+.catch(error_func);
 
-export const testimoni =  fetch(`${baseUrl}/Testimoni/ListTestimoni`, {
-    method: 'GET', 
-    headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning':'true'
-    },
-    mode: 'cors' 
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json(); 
-})
-.then(({data}) => {
-    return data
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
+export const testimoni =  fetch(`${baseUrl}/Testimoni/ListTestimoni`, headers)
+.then(response_func)
+.then(data)
+.catch(error_func);
