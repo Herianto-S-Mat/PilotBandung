@@ -1,8 +1,9 @@
-const baseUrl = 'https://bluegill-top-dog.ngrok-free.app/v1'
+const baseUrl = 'https://next-pig-game.ngrok-free.app/v1'
 export const layanan =  fetch(`${baseUrl}/Jasa/Get_List_Jasa`, {
     method: 'GET', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning':'true'
     },
     mode: 'cors' 
 })
@@ -23,7 +24,8 @@ export const layanan =  fetch(`${baseUrl}/Jasa/Get_List_Jasa`, {
 export const detail_jasa = (idjasa) => fetch(`${baseUrl}/Jasa/Get_Detail_Jasa_Filter?idjasa=${idjasa}`, {
     method: 'GET', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning':'true'
     },
     mode: 'cors' 
 })
@@ -43,7 +45,8 @@ export const detail_jasa = (idjasa) => fetch(`${baseUrl}/Jasa/Get_Detail_Jasa_Fi
 export const banner =  fetch(`${baseUrl}/BannerAbout/ListBannerAbout`, {
     method: 'GET', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning':'true'
     },
     mode: 'cors' 
 })
@@ -64,7 +67,8 @@ export const banner =  fetch(`${baseUrl}/BannerAbout/ListBannerAbout`, {
 export const info =  fetch(`${baseUrl}/Information/ListInformation`, {
     method: 'GET', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning':'true'
     },
     mode: 'cors' 
 })
@@ -85,7 +89,8 @@ export const info =  fetch(`${baseUrl}/Information/ListInformation`, {
 export const bannerpic =  fetch(`${baseUrl}/Gambar/ListGambarFilter?idgambar=1`, {
     method: 'GET', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning':'true'
     },
     mode: 'cors' 
 })
@@ -105,7 +110,8 @@ export const bannerpic =  fetch(`${baseUrl}/Gambar/ListGambarFilter?idgambar=1`,
 export const pictures =  fetch(`${baseUrl}/Gambar/ListGambar`, {
     method: 'GET', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning':'true'
     },
     mode: 'cors' 
 })
@@ -125,7 +131,8 @@ export const pictures =  fetch(`${baseUrl}/Gambar/ListGambar`, {
 export const testimoni =  fetch(`${baseUrl}/Testimoni/ListTestimoni`, {
     method: 'GET', 
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning':'true'
     },
     mode: 'cors' 
 })
